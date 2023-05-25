@@ -2,7 +2,7 @@
 <br>
 This web application allows you to manage bank accounts. It is developed using Spring Boot for the backend and Angular for the frontend.
 
-[![View Backend](https://img.shields.io/badge/View_Backend-GitHub-blue.svg)]([https://github.com/your-backend-repo](https://github.com/oussama-tahri/Digital-Banking/tree/master/Digital%20Banking%20Backend)) [![View Frontend](https://img.shields.io/badge/View_Frontend-GitHub-green.svg)]([https://github.com/your-frontend-repo](https://github.com/oussama-tahri/Digital-Banking/tree/master/Digital-Banking-Web))
+[![View Backend](https://img.shields.io/badge/View_Backend-GitHub-blue.svg)](https://github.com/oussama-tahri/Digital-Banking/tree/master/Digital%20Banking%20Backend) [![View Frontend](https://img.shields.io/badge/View_Frontend-GitHub-green.svg)](https://github.com/oussama-tahri/Digital-Banking/tree/master/Digital-Banking-Web)
 
 ## Description
 
