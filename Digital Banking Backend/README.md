@@ -1,22 +1,7 @@
 <h1>Spring Boot & Angular Digital Banking Application</h1>
 <br>
 <hr>
-<style>
-      /* Define the styles for the box */
-      .box {
-        width: 120px;
-        height: 140px;
-        border: 3px solid dimgrey;
-        text-align: center; /* Center the text horizontally */
-        line-height: 100px;/* Center the text vertically */
-        font-family: "Cascadia Code";
-      }
-    </style>
-<div>
-<center>
-    <center class="box">
       <p>Backend</p>
-    </center>
 
 </center>
     </div>
