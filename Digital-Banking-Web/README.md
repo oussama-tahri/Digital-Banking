@@ -59,7 +59,7 @@ Cette section affiche la liste des clients existants. Elle comporte un champ de 
 
 <br>
 
-<<<<<<< HEAD
+
 ## 1.4- Modifier le client
 
 <img src="caps/edit.PNG">
@@ -67,12 +67,9 @@ Cette section affiche la liste des clients existants. Elle comporte un champ de 
 
 <br>
 
-## 1.5- Ajout de nouveaux clients
-```markdown
-=======
-## 1.4- Ajout de nouveaux clients
 
->>>>>>> 2b845d716d1d380737b32be069cdd6107fa816b1
+## 1.5- Ajout de nouveaux clients
+
 Cette section permet d'ajouter de nouveaux clients à l'application. Un formulaire est affiché avec les champs requis tels que le nom et l'e-mail. Des validations sont effectuées sur les champs pour s'assurer que les données saisies sont correctes. L'utilisateur peut enregistrer le nouveau client en cliquant sur le bouton "Save".
 
 
