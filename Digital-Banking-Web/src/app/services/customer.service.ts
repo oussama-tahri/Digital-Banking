@@ -26,4 +26,8 @@ export class CustomerService {
   public deleteCustomer(id : number) : Observable<Customer> {
     return this.http.delete<Customer>(environment.backendBase+"/customers/"+id)
   }
+
+  public updateCustomer(id : number, customer : Customer) : Observable<Customer> {
+    return this.http.put<Customer>(environment.backendBase+"/customers/"+id ,customer)
+  }
 }

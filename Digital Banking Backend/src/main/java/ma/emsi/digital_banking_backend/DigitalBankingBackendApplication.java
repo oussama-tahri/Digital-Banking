@@ -32,6 +32,8 @@ public class DigitalBankingBackendApplication {
         SpringApplication.run(DigitalBankingBackendApplication.class, args);
     }
 
+
+
     @Bean
     CommandLineRunner consultationOfAccounts(BankAccountService bankAccountService) {
         return args -> {

@@ -18,13 +18,20 @@ L'interface principale de l'application est représentée par une section avec l
 ```html
 <section class="home">
   <div class="container">
-    <h2 class="title">Bienvenue dans l'application Digital Banking</h2>
+    <h2 class="title">Welcome to the Digital Banking App</h2>
     <div class="cta-buttons">
-      <a class="btn btn-primary" routerLink="/account">Consulter votre compte bancaire</a>
-      <a class="btn btn-secondary" routerLink="/customers">Vérifier les clients</a>
+      <a class="btn btn-primary animated-button" routerLink="/accounts">
+        <span class="button-text">Consult Your Bank Account</span>
+        <span class="button-background"></span>
+      </a>
+      <a class="btn btn-secondary animated-button" routerLink="/customers">
+        <span class="button-text">Check Customers</span>
+        <span class="button-background"></span>
+      </a>
     </div>
   </div>
 </section>
+
 ```
 # Partie Customers
 ```markdown
@@ -52,7 +59,14 @@ Cette section affiche la liste des clients existants. Elle comporte un champ de 
 
 <br>
 
-## 1.4- Ajout de nouveaux clients
+## 1.4- Modifier le client
+
+<img src="caps/edit.PNG">
+<img src="caps/editCustomer.PNG">
+
+<br>
+
+## 1.5- Ajout de nouveaux clients
 ```markdown
 Cette section permet d'ajouter de nouveaux clients à l'application. Un formulaire est affiché avec les champs requis tels que le nom et l'e-mail. Des validations sont effectuées sur les champs pour s'assurer que les données saisies sont correctes. L'utilisateur peut enregistrer le nouveau client en cliquant sur le bouton "Save".
 ```
@@ -96,15 +110,11 @@ Cette section est divisée en deux parties :
 
 <img src="caps/DEBIT.PNG">
 
-<img src="caps/dHis.PNG">
-
 <br>
 
 ## 1.2- CREDIT
 
 <img src="caps/credit.PNG">
-
-<img src="caps/cHis.PNG">
 
 <br>
 
@@ -112,13 +122,9 @@ Cette section est divisée en deux parties :
 
 <img src="caps/transfer.PNG">
 
-### - Compte source
-
-<img src="caps/des.PNG">
-
 <br>
 
-### - Compte de destination
+### - Nouvelle Historique des operations
 
 <img src="caps/dest.PNG">
 

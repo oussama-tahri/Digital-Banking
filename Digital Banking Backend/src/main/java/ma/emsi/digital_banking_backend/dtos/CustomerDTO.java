@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ma.emsi.digital_banking_backend.entities.BankAccount;
+import ma.emsi.digital_banking_backend.enums.UserRole;
 
 import java.util.List;
 

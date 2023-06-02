@@ -1,0 +1,13 @@
+.card-3d {
+  perspective: 1000px;
+}
+
+.card-3d .card-body {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-3d:hover .card-body {
+  transform: rotateY(20deg);
+}
+

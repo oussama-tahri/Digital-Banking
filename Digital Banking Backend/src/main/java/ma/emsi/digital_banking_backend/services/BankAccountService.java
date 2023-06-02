@@ -10,6 +10,8 @@ import ma.emsi.digital_banking_backend.exceptions.CustomerNotFoundException;
 import java.util.List;
 
 public interface BankAccountService {
+    Boolean hasUserWithEmail(String email);
+
     CustomerDTO saveCustomer(CustomerDTO customerDTO);
     CurrentBankAccountDTO saveCurrentBankAccount(double initialBalance, double overDraft, Long customerId) throws CustomerNotFoundException;
     SavingBankAccountDTO saveSavingBankAccount(double initialBalance, double interestRate, Long customerId) throws CustomerNotFoundException;
@@ -31,4 +33,6 @@ public interface BankAccountService {
     AccountHistoryDTO getAccountHistory(String accountId, int page, int size) throws BankAccountNotFoundException;
 
     List<CustomerDTO> searchCustomers(String keyword);
+
+
 }

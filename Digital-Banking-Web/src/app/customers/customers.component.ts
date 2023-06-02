@@ -57,4 +57,19 @@ export class CustomersComponent implements OnInit {
   handleCustomerAccounts(customer: Customer) {
     this.router.navigateByUrl("/customer-accounts/"+customer.id,{state :customer});
   }
+
+  getIconClass(action: string): string {
+    switch (action) {
+      case 'edit':
+        return 'bi bi-pencil';
+      case 'delete':
+        return 'bi bi-trash';
+      case 'accounts':
+        return 'bi bi-wallet';
+      default:
+        return '';
+    }
+  }
+
+
 }

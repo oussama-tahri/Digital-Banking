@@ -1,4 +1,19 @@
 <div class="container">
-  <div>{{customerId}}</div>
-  <div>{{customer | json}}</div>
+  <div class="card card-3d mt-5">
+    <div class="card-header bg-primary text-white">Customer Information</div>
+    <div class="card-body">
+      <div class="customer-id">
+        <h4>Customer ID:</h4>
+        <h4>{{ customerId }}</h4>
+      </div>
+      <div class="customer-details">
+        <pre>{{ customer | json }}</pre>
+      </div>
+      <div class="text-center mt-4">
+        <a class="btn btn-primary" routerLink="/customers">
+          Back to Customers
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

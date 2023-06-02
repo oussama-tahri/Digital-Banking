@@ -11,6 +11,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { NewCustomerComponent } from './new-customer/new-customer.component';
 import { CustomerAccountsComponent } from './customer-accounts/customer-accounts.component';
 import { HomeComponent } from './home/home.component';
+import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     AccountsComponent,
     NewCustomerComponent,
     CustomerAccountsComponent,
-    HomeComponent
+    HomeComponent,
+    EditCustomerComponent
   ],
   imports: [
     BrowserModule,

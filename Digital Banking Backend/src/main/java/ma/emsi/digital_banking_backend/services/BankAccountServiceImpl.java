@@ -1,11 +1,12 @@
 package ma.emsi.digital_banking_backend.services;
 
-import jakarta.transaction.Transactional;
+
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import ma.emsi.digital_banking_backend.dtos.*;
 import ma.emsi.digital_banking_backend.entities.*;
 import ma.emsi.digital_banking_backend.enums.OperationType;
+import ma.emsi.digital_banking_backend.enums.UserRole;
 import ma.emsi.digital_banking_backend.exceptions.BalanceNotSufficientException;
 import ma.emsi.digital_banking_backend.exceptions.BankAccountNotFoundException;
 import ma.emsi.digital_banking_backend.exceptions.CustomerNotFoundException;
@@ -16,6 +17,7 @@ import ma.emsi.digital_banking_backend.repositories.CustomerRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
@@ -33,6 +35,11 @@ public class BankAccountServiceImpl implements BankAccountService {
     private BankAccountRepository bankAccountRepository;
     private AccountOperationRepository accountOperationRepository;
     private CustomerMapperImpl customerMapper;
+
+    @Override
+    public Boolean hasUserWithEmail(String email) {
+        return customerRepository.findByEmail(email) != null;
+    }
 
     @Override
     public CustomerDTO saveCustomer(CustomerDTO customerDTO) {

@@ -1,12 +1,13 @@
 package ma.emsi.digital_banking_backend.services;
 
-import jakarta.transaction.Transactional;
+
 import lombok.AllArgsConstructor;
 import ma.emsi.digital_banking_backend.entities.BankAccount;
 import ma.emsi.digital_banking_backend.entities.CurrentAccount;
 import ma.emsi.digital_banking_backend.entities.SavingAccount;
 import ma.emsi.digital_banking_backend.repositories.BankAccountRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
