@@ -5,9 +5,9 @@ Ce rapport décrit la partie frontend de l'application web Digital Banking déve
 <hr>
 
 # Interface Home
-```markdown
+
 Cette section d'accueil présente un titre de bienvenue et deux boutons. Le premier bouton redirige vers la page de consultation des comptes bancaires, tandis que le deuxième bouton permet de vérifier les clients enregistrés.
-```
+
 <br>
 <h1></h1>
 <img src="caps/Home.PNG">
@@ -34,13 +34,13 @@ L'interface principale de l'application est représentée par une section avec l
 
 ```
 # Partie Customers
-```markdown
+
 La partie "Customers" est divisée en deux sections : la consultation des clients existants et l'ajout de nouveaux clients.
-```
+
 ## 1.1- Consultation des clients
-```markdown
+
 Cette section affiche la liste des clients existants. Elle comporte un champ de recherche permettant de filtrer les clients par mot clé. Chaque client est affiché dans un tableau avec les informations telles que l'ID, le nom et l'e-mail. Deux boutons sont disponibles pour supprimer le client ou accéder à ses comptes.
-```
+
 <br>
 
 <img src="caps/client.PNG">
@@ -59,6 +59,7 @@ Cette section affiche la liste des clients existants. Elle comporte un champ de 
 
 <br>
 
+<<<<<<< HEAD
 ## 1.4- Modifier le client
 
 <img src="caps/edit.PNG">
@@ -68,8 +69,12 @@ Cette section affiche la liste des clients existants. Elle comporte un champ de 
 
 ## 1.5- Ajout de nouveaux clients
 ```markdown
+=======
+## 1.4- Ajout de nouveaux clients
+
+>>>>>>> 2b845d716d1d380737b32be069cdd6107fa816b1
 Cette section permet d'ajouter de nouveaux clients à l'application. Un formulaire est affiché avec les champs requis tels que le nom et l'e-mail. Des validations sont effectuées sur les champs pour s'assurer que les données saisies sont correctes. L'utilisateur peut enregistrer le nouveau client en cliquant sur le bouton "Save".
-```
+
 
 <br>
 
@@ -86,21 +91,21 @@ Cette section permet d'ajouter de nouveaux clients à l'application. Un formulai
 <br>
 
 # Comptes bancaires et opérations
-```markdown
+
 La section des comptes bancaires permet de consulter les informations d'un compte spécifique et d'effectuer des opérations financières.
-```
+
 
 <img src="caps/accId.PNG">
 
 <br>
 
-```markdown
+
 Cette section est divisée en deux parties :
 
 - La première partie affiche les détails du compte bancaire spécifié, y compris l'ID du compte et le solde actuel. Elle liste également les opérations effectuées sur le compte, affichant leur ID, la date, le type et le montant.
 
 - La deuxième partie permet à l'utilisateur d'effectuer des opérations financières sur le compte sélectionné. Il peut choisir entre les options de débit, de crédit et de transfert. Si l'option de transfert est sélectionnée, un champ supplémentaire pour spécifier le compte de destination s'affiche. L'utilisateur doit également saisir le montant et une description de l'opération. Ensuite, il peut enregistrer l'opération en cliquant sur le bouton correspondant.
-```
+
 
 <img src="caps/accHisOps.PNG">
 
