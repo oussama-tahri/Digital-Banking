@@ -4,6 +4,8 @@ This web application allows you to manage bank accounts. It is developed using S
 
 [![View Backend](https://img.shields.io/badge/View_Backend-GitHub-blue.svg)](https://github.com/oussama-tahri/Digital-Banking/tree/master/Digital%20Banking%20Backend) [![View Frontend](https://img.shields.io/badge/View_Frontend-GitHub-green.svg)](https://github.com/oussama-tahri/Digital-Banking/tree/master/Digital-Banking-Web)
 
+Sure! Here's the updated description of the Digital Banking Application, including the implementation of security using JWT with two roles (user and admin) in the backend and frontend:
+
 ## Description
 
 The Digital Banking Application provides functionality to manage different types of bank accounts. There are two types of accounts: Current Account and Saving Account. Each account has a unique ID and specific attributes based on its type. Current Accounts have an Overdraft attribute, while Saving Accounts have an Interest Rate attribute.
@@ -15,6 +17,10 @@ Customers are registered in the system and have the following attributes: ID, na
 ## Backend
 
 The backend of the Digital Banking Application is built with Spring Boot. It provides RESTful APIs to perform various operations on bank accounts and customers. The backend architecture follows a layered approach, consisting of the following components:
+
+### Security
+
+The backend implements security using JWT (JSON Web Token) to ensure secure authentication and authorization. When a user logs in successfully, the backend generates a JWT token containing the user's roles (user or admin) as claims. This token is then returned to the frontend and stored securely in the browser.
 
 ### Controllers
 
@@ -40,7 +46,9 @@ DTOs are used to transfer data between the backend and frontend. They encapsulat
 
 The frontend of the Digital Banking Application is developed using Angular. It provides a user-friendly interface for interacting with the application.
 
-The frontend architecture follows a component-based approach, consisting of the following components:
+### Security
+
+In the frontend, the JWT token received from the backend is securely stored in the browser, either in local storage or session storage. Angular route guards are implemented to control access to different routes based on user roles. The route guards check for the presence of a valid JWT token and the required role before allowing access to specific routes. An HTTP interceptor is set up to automatically attach the JWT token to outgoing API requests, ensuring that only authenticated and authorized users can access protected backend routes.
 
 ### Components
 
@@ -56,7 +64,7 @@ Models represent the data structures used in the frontend. They mirror the backe
 
 ## Getting Started
 
-To run the Digital Banking Application locally, follow these steps:
+To run the Digital Banking Application locally, follow the instructions below:
 
 1. Clone the repository from [GitHub](https://github.com/oussama-tahri/Digital-Banking.git).
 2. Configure the backend by updating the necessary configuration files, such as database settings and API endpoints.
