@@ -28,7 +28,7 @@ export class EditCustomerComponent implements OnInit {
       this.customerService.updateCustomer(customer.id, customer).subscribe({
         next: data => {
           alert('Customer has been edited!');
-          this.router.navigateByUrl('/customers');
+          this.router.navigateByUrl('/admin/customers');
         },
         error: err => {
           console.log(err);

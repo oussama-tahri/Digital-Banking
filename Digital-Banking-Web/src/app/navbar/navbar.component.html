@@ -1,22 +1,30 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand bi bi-house" href="#" routerLink="/home"></a>
+    <a class="navbar-brand bi bi-house" href="#" routerLink="/admin/home"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link bi bi-list-ol" routerLink="/accounts">Accounts</a>
+          <a class="nav-link bi bi-list-ol" routerLink="/admin/accounts">Accounts</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle bi bi-list" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Customers
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item bi bi-search" routerLink="/customers">Search Customers</a></li>
-            <li><a class="dropdown-item bi bi-database-add" routerLink="/new-customer">New Customer</a></li>
+            <li><a class="dropdown-item bi bi-search" routerLink="/admin/customers">Search Customers</a></li>
+            <li *ngIf="authService.roles.includes('ADMIN')"><a class="dropdown-item bi bi-database-add" routerLink="/admin/new-customer">New Customer</a></li>
           </ul>
+        </li>
+      </ul>
+      <ul class="navbar" *ngIf="authService.isAuthenticated==true">
+        <li class="nav-item">
+          <a class="navbar-brand text-light">{{this.authService.username}}</a>
+        </li>
+        <li>
+          <button (click)="handleLogout()" class="btn btn-danger">Logout</button>
         </li>
       </ul>
     </div>

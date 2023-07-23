@@ -20,7 +20,7 @@
             <th>ID</th>
             <th>NAME</th>
             <th>EMAIL</th>
-            <th class="text-start">ACTIONS</th>
+            <th class="text-start" *ngIf="authService.roles.includes('ADMIN')">ACTIONS</th>
           </tr>
           </thead>
           <tbody>
@@ -28,9 +28,9 @@
             <td>{{ c.id }}</td>
             <td>{{ c.name }}</td>
             <td>{{ c.email }}</td>
-            <td>
-              <div class="d-flex justify-content-start">
-                <button class="btn btn-light btn-action me-4" routerLink="/editCustomer">
+            <td >
+              <div class="d-flex justify-content-start" *ngIf="authService.roles.includes('ADMIN')">
+                <button class="btn btn-light btn-action me-4" routerLink="/admin/editCustomer">
                   <i class="bi bi-pencil-fill"></i>
                 </button>
                 <button class="btn btn-danger btn-action me-4" (click)="handleDeleteCustomer(c)">
@@ -45,7 +45,7 @@
           </tbody>
         </table>
         <div class="text-center mt-4">
-          <a class="btn btn-primary" routerLink="/home">
+          <a class="btn btn-primary" routerLink="/admin/home">
             Back to Home
           </a>
         </div>

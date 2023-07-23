@@ -2,9 +2,30 @@
 <br>
 <hr>
 Ce rapport décrit la partie frontend de l'application web Digital Banking développée en utilisant le framework Angular. L'application propose différentes fonctionnalités pour gérer les opérations bancaires en ligne, y compris la consultation des comptes, la gestion des clients et les opérations financières telles que le débit, le crédit et le transfert.
+<br>Cette architecture frontend avec une couche de sécurité JWT renforcée contribue à offrir une expérience utilisateur sécurisée et fiable 
 <hr>
 
-# Interface Home
+
+# L'authentification
+
+Cette section représente un formulaire de connexion stylisé dans une carte avec des champs pour saisir le nom d'utilisateur et le mot de passe, ainsi qu'un bouton de connexion. Selon le type d'utilisateur authentifié (utilisateur "user" ou "admin"), des fonctionnalités spécifiques sont autorisées : l'utilisateur "user" peut consulter les clients et leurs opérations pour son compte, tandis que l'utilisateur "admin" a des droits étendus pour consulter, ajouter, modifier et supprimer des clients, ainsi que pour effectuer des transactions (débit, crédit, transfert).
+
+
+<br>
+<h1></h1>
+<img src="caps/LoginPage.PNG">
+<br>
+
+<hr>
+
+# ------------------- ADMIN ---------------------
+
+<br>
+<h1></h1>
+<img src="caps/LoginAdmin.PNG">
+<br>
+
+## Interface Home
 
 Cette section d'accueil présente un titre de bienvenue et deux boutons. Le premier bouton redirige vers la page de consultation des comptes bancaires, tandis que le deuxième bouton permet de vérifier les clients enregistrés.
 
@@ -136,6 +157,48 @@ Cette section est divisée en deux parties :
 
 <img src="caps/db.PNG">
 
+<br>
+
+
+# ------------------- USER ---------------------
+
+<br>
+<h1></h1>
+<img src="caps/LoginUser.PNG">
+<br>
+
+## Interface Home
+
+Cette section d'accueil présente un titre de bienvenue et deux boutons. En tant qu'utilisateur, vous pouvez consulter vos comptes bancaires, mais l'accès aux informations détaillées des clients et aux actions avancées est restreint.
+
+<br>
+<h1></h1>
+<img src="caps/HomeUser.PNG">
+<br>
+
+# Partie Customers
+
+## 1.1- Consultation des clients
+
+
+Dans cette section on affiche une liste de clients dans un tableau. Si l'utilisateur est un "user", il peut consulter la liste des clients, mais les actions avancées telles que l'édition, la suppression et l'accès aux comptes des clients ne sont pas disponibles pour lui.
+
+<br>
+<h1></h1>
+<img src="caps/CustomersListUser.PNG">
+<br>
+
+
+# Comptes bancaires
+
+Pour un utilisateur, cette section affiche un formulaire permettant de rechercher des comptes bancaires en utilisant leur ID. Les détails du compte bancaire sont affichés, y compris le solde et les opérations effectuées sur le compte. L'utilisateur peut également naviguer entre les pages des opérations et voir les détails de chaque opération.
+
+Cependant, certaines fonctionnalités sont restreintes pour un utilisateur. Par exemple, la partie "Operations" qui permet d'effectuer des opérations (débit, crédit, transfert) et d'ajouter des opérations est réservée à l'administrateur.
+
+
+<br>
+<h1></h1>
+<img src="caps/OperationsListUser.PNG">
 <br>
 
 # Conclusion

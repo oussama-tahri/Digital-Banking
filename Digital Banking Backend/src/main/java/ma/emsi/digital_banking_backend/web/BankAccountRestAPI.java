@@ -11,6 +11,8 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+// This CrossOrigin will deal with cors but not the case when Using Spring Security
+// (Look at corsConfigurationSource() -> SecurityConfig.java for solution)
 @CrossOrigin("*")
 public class BankAccountRestAPI {
     private BankAccountService bankAccountService;
